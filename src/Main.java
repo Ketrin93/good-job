@@ -1,6 +1,5 @@
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Task 1");
+    public static void main(String[] args){System.out.println("Task 1");
         for (int i = 1; i <= 10; i = i + 1) {
             System.out.println("Итерация цикла " + i);
         }
@@ -26,8 +25,8 @@ public class Main {
         }
         System.out.println(" Task 7");
         for (int i = 1; i <= 512; i = i * 2) {
-            System.out.println(  i + ";"); }
-
+            System.out.println(i + ";");
+        }
         System.out.println(" Task 8");
         int salary = 29000;
         int total = 0;
@@ -51,5 +50,5 @@ public class Main {
     }
 
 
-}
 
+}
