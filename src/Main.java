@@ -26,8 +26,8 @@ public class Main {
         }
         System.out.println(" Task 7");
         for (int i = 1; i <= 512; i = i * 2) {
-            System.out.println(+i + ";");
-        }
+            System.out.println(  i + ";"); }
+
         System.out.println(" Task 8");
         int salary = 29000;
         int total = 0;
