@@ -54,19 +54,21 @@ public class Main {
         int summ = 0;
         int day = 0;
         while (summ < 2459000) {
-            summ = summ + deposit;
             day++;
-            System.out.println("день " + day + " Итого " + summ);
+            summ = deposit+ summ +(summ / 100);
+            System.out.println("Месяц" + day +"сумма накоплений равна " + summ +"рублей");
         }
         System.out.println("Задача 2");
-        int start = 1;
-        while (start < 10) {
-            System.out.print("1 2 3 4 5 6 7 8 9 10 ");
-            start = start + 1;
+        int numbersB = 0;
+        while (numbersB <10) {
+            numbersB = numbersB + 1;
+            System.out.print(numbersB + " ");
         }
         System.out.println();
-        for (int i = 10; i > 1; i--) {
-            System.out.print(" 10 9 8 7 6 5 4 3 2 1");
+        int numbersS =11;
+        for(; numbersS > 1;) {
+            numbersS =numbersS - 1;
+            System.out.print( numbersS + " ");
 
 
         }
@@ -82,26 +84,26 @@ public class Main {
         }
         System.out.println("Задача 4");
         int deposit2 = 15000;
-        double monthlyPercent = 0.07;
+        int  monthlyPercent = 7;
         int totalAmount = 12_000_000;
         int numberMonth = 1;
 
-        while (deposit <= totalAmount) {
-            deposit += deposit2 * monthlyPercent;
+        while (deposit < totalAmount) {
+            deposit+= deposit + monthlyPercent ;
             System.out.printf("Месяц %d, сумма накоплений: %d%n", numberMonth, deposit);
             numberMonth++;
         }
 
 
         System.out.println("Задача 5");
-        int vasyaPut = 15000;
-        int zlato = 0;
-        while (vasyaPut < 12000000) {
-            vasyaPut = vasyaPut + vasyaPut / 100 * 7;
-            zlato = zlato + 1;
-            if (zlato % 6 == 0) {
+        int vasyaVlozhil = 15000;
+        int invoice = 0;
+        while (vasyaVlozhil < 12000000) {
+            vasyaVlozhil = vasyaVlozhil + vasyaVlozhil / 100  * 6;
+            invoice=invoice + 1;
+            if (invoice % 6 == 0) {
             }
-            System.out.println("Месяц" + zlato + "вклад равен" + vasyaPut);
+            System.out.println("Месяц" + invoice + " ,вклад равен" + vasyaVlozhil);
         }
         System.out.println("Задача 6");
 
@@ -109,10 +111,12 @@ public class Main {
         int year = 9;
         int monthInTheYear = 12;
         int month2 = 0;
-        int totalMonth = year * monthInTheYear;
-        while (total  <= totalMonth)
+        int totalMonth = year + monthInTheYear;
+        while (total  < totalMonth) {
+            month2++;
             total = total + sum;
-        total = total + (total * 7) / 100;
+        }
+        total = total +total * 7 / 100 ;
         if (month2 % 6 == 0) {
             System.out.println(" Месяц" + month2 + "сумма накоплений равна" + total);
         }
